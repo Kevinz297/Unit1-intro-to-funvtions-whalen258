@@ -2,14 +2,21 @@ print("tests")
 import turtle
 from turtle import *
 t = Turtle()
-
+t.speed(99)
 t.shape('turtle')
 
-x=5
+sidelength = 100
+rotate=144
 
-for i in range(180):
-        print(i)
-        t.forward(x)
-        t.left(120)
+def square(sidelength, rotate):
+    for i in range(5):
+        t.forward(sidelength)
+        t.left(rotate)
 
-turtle.done()
+def doubleSquares(iRange):
+    length = 5
+    for i in range(iRange):
+        square(length, rotate)
+        length += 5
+        t.right(5)
+doubleSquares(60)
